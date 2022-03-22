@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         imageView.backgroundColor = .white
         return imageView
     }()
-    
+
     private let button: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
@@ -23,8 +23,7 @@ class ViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         return button
     }()
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
@@ -44,11 +43,10 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
 
-    
     @objc func didTapButton(){
         getRandomPhoto()
     }
-    
+
     func getRandomPhoto(){
         let urlString = "https://source.unsplash.com/random/600x600"
         guard let url = URL(string: urlString) else { return }
